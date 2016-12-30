@@ -11,7 +11,7 @@ package geneticalgorithmtsp;
  */
 public class GA {
     /* GA parameters */
-    private static final double mutationRate = 0.015;
+    private static final double mutationRate = 0.1;
     private static final int tournamentSize = 5;
     private static final boolean elitism = true;
 
@@ -107,7 +107,7 @@ public class GA {
     }
 
     // Selects candidate tour for crossover
-    private static Tour tournamentSelection(Population pop) {
+    public static Tour tournamentSelection(Population pop) {
         // Create a tournament population
         Population tournament = new Population(tournamentSize, false);
         // For each place in the tournament get a random candidate tour and
